@@ -23,7 +23,8 @@ setup(
         ],
     },
     entry_points={
-        'console_scripts': [
-        ],
-    },
+    "console_scripts": [
+        "executor = robot_controller.executor:main",
+    ],
+},
 )

@@ -1,0 +1,3 @@
+map_server:
+  ros__parameters:
+    yaml_filename: "/opt/ros/jazzy/share/turtlebot3_navigation2/map/map.yaml"
