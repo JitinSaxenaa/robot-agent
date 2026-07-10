@@ -64,6 +64,31 @@ TurtleBot3's shipped `param/burger.yaml` hardcodes `map_server.yaml_filename: "m
 
 ## Running the simulation
 
+### If `bt_navigator` stays inactive after Startup
+
+Occasionally the navigation lifecycle group times out during autostart if the
+initial pose isn't set quickly enough after Nav2 launches — it aborts bringup
+and does not retry automatically. If `ros2 lifecycle get /bt_navigator` still
+shows `inactive` after setting the pose and clicking "Startup" in RViz, bring
+it up manually, one command at a time:
+
+```bash
+ros2 lifecycle set /controller_server configure
+ros2 lifecycle set /controller_server activate
+ros2 lifecycle set /planner_server configure
+ros2 lifecycle set /planner_server activate
+ros2 lifecycle set /behavior_server configure
+ros2 lifecycle set /behavior_server activate
+ros2 lifecycle set /bt_navigator configure
+ros2 lifecycle set /bt_navigator activate
+```
+
+Then confirm:
+```bash
+ros2 lifecycle get /bt_navigator
+# should now print: active [3]
+```
+
 Five terminals, run in order. Each script sources the required ROS environment automatically.
 
 ```bash
