@@ -41,6 +41,19 @@ pip install ollama --break-system-packages
 cd ros2_ws
 colcon build
 source install/setup.bash
+
+## Shell setup (one-time, after running install.sh)
+
+Add these to your `~/.bashrc` so every new terminal is ready automatically:
+
+```bash
+echo 'source /opt/ros/jazzy/setup.bash' >> ~/.bashrc
+echo 'source ~/robot-agent/ros2_ws/install/setup.bash' >> ~/.bashrc
+echo 'export TURTLEBOT3_MODEL=burger' >> ~/.bashrc
+source ~/.bashrc
+```
+
+Adjust the `ros2_ws` path above if you cloned this repo somewhere other than `~/robot-agent`.
 ```
 
 ## A known TurtleBot3 Nav2 quirk (and our fix)

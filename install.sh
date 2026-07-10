@@ -31,6 +31,9 @@ sudo apt install -y \
   ros-jazzy-turtlebot3-simulations \
   ros-jazzy-turtlebot3-bringup \
   ros-jazzy-turtlebot3-msgs
+  
+  echo "--- Installing tf_transformations ---"
+sudo apt install -y ros-jazzy-tf-transformations
 
 # --- 4. Ollama (local LLM runtime) ---
 echo "--- Installing Ollama ---"
