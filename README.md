@@ -24,6 +24,10 @@ The LLM only proposes a mission plan — it never issues motor commands directly
 - Python 3.12
 - [Ollama](https://ollama.com) with the `llama3.1:8b` model pulled
 
+## Demo Video
+
+[![LLM-Driven Autonomous Robot Navigation](https://img.youtube.com/vi/TzlC3SX5W5g/0.jpg)](https://youtu.be/TzlC3SX5W5g)
+
 ## Setup
 
 ```bash
